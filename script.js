@@ -19,7 +19,7 @@ inputField.addEventListener("keydown", (event) => {
       rightPos = lastCaretPos + 15;
       eyeballs[0].style.right = rightPos + '%';
       eyeballs[1].style.right = rightPos + '%';
-    } else {
+    } else if(event.key !== "Backspace") {
       lastCaretPos += 2;
       rightPos = lastCaretPos + 15;
       eyeballs[0].style.right = rightPos + '%';
