@@ -1,0 +1,126 @@
+
+*, :before, :after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1c676d, #2b5863, #24243e);;
+}
+
+.input-area{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.input-area > .input-label{
+    font-family: Courier, monospace;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2.5px;
+    font-size: 2em;
+    background: linear-gradient(90deg, rgba(28, 228, 94, 0.87) 0%, rgb(236, 28, 108) 57%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.input-area >.input{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    border: 2px solid rgb(29, 28, 28);
+    padding: 10px;
+    color: #1c676d;
+}
+
+.input-area::before{
+    position: absolute;
+    content: 'Typr Here';
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    bottom: 80%;
+    right: 40%;
+    font-weight: 900;
+    background-color: #fff;
+    border-top: 2px solid #000;
+}
+
+/* EYES */
+
+.eyes{
+    height: 175px;
+    width: 360px;
+    margin-bottom: 23px;
+    position: relative;
+}
+
+.left-eye{
+    position: absolute;
+    height: 175px;
+    width: 180px;
+    background-color: #f1f1f1;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    border: 2px solid black;
+    transform: rotateZ(180deg);
+}
+
+.right-eye{
+    position: absolute;
+    left: 50%;
+    height: 175px;
+    width: 180px;
+    background-color: #f1f1f1;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: rotateZ(180deg);
+    border: 2px solid black;
+}
+
+.eyeball{
+    height: 20px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: rgb(49, 48, 48);
+    z-index: 3;
+    position: absolute;
+    right: 15%;
+    top: 19%;
+    animation: blink 2s ease-in-out forwards;
+}
+
+.eyebrow{
+    display: flex;
+    position: absolute;
+    width: 178px;
+    height: 100px;
+    border: solid 2px #000;
+    border-color: #000 transparent transparent transparent;
+    border-radius: 125%/100px 111px 0 0;
+    transform: rotateZ(180deg) translateY(50%);
+    animation: moveEyebrow 800ms ease-in-out forwards;
+}
+
+@keyframes moveEyebrow {
+    100%{ 
+        transform: rotateZ(180deg) translateY(5%);
+    }
+}
+
+
+@keyframes blink {
+    0%{
+        height: 1px;
+    }
+
+    100%{ 
+        height: 18px;
+    }
+}
+
+
