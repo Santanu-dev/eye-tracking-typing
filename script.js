@@ -15,12 +15,12 @@ inputField.addEventListener("keydown", (event) => {
 
   if (rightPos >= 16 && rightPos < 71) {
     if (event.key === "Backspace") {
-      lastCaretPos -= 3;
+      lastCaretPos -= 2;
       rightPos = lastCaretPos + 15;
       eyeballs[0].style.right = rightPos + '%';
       eyeballs[1].style.right = rightPos + '%';
     } else {
-      lastCaretPos += 3;
+      lastCaretPos += 2;
       rightPos = lastCaretPos + 15;
       eyeballs[0].style.right = rightPos + '%';
       eyeballs[1].style.right = rightPos + '%';
@@ -30,7 +30,7 @@ inputField.addEventListener("keydown", (event) => {
   if(rightPos >= 71){
     rightPos = 75;
     if (event.key === "Backspace") {
-        lastCaretPos -= 3;
+        lastCaretPos -= 2;
         rightPos = lastCaretPos + 15;
         eyeballs[0].style.right = rightPos + '%';
         eyeballs[1].style.right = rightPos + '%';
@@ -40,7 +40,7 @@ inputField.addEventListener("keydown", (event) => {
   if(rightPos <= 16){
     rightPos = 15;
     if (event.key !== "Backspace") {
-        lastCaretPos += 3;
+        lastCaretPos += 2;
       rightPos = lastCaretPos + 15;
       eyeballs[0].style.right = rightPos + '%';
       eyeballs[1].style.right = rightPos + '%';

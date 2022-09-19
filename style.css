@@ -35,6 +35,7 @@ body{
     font-size: 25px;
     border: 2px solid rgb(29, 28, 28);
     padding: 10px;
+    margin: 0 10px;
     color: #1c676d;
 }
 
@@ -133,4 +134,9 @@ body{
     }
 }
 
-
+@media screen and (max-width: 450px) {
+    .input-area > .input-label{
+        font-size: 1.5em;
+        margin-left: 15px;
+    }
+}
